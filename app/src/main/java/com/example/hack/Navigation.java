@@ -1,77 +1,65 @@
 package com.example.hack;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
-
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
-import android.support.design.widget.NavigationView;
-import android.support.v7.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class Navigation extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private DrawerLayout drawer;
-
-
+public class Navigation extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Toolbar toolbar=(android.support.v7.widget.Toolbar)findViewById(R.id.toolbar);
+        setContentView(R.layout.activity_navigation);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Home");
         setSupportActionBar(toolbar);
-        drawer=findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawer,toolbar,
-                R.string.navigation_drawer_open,R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        NavigationView navigationView=findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
-        if(savedInstanceState==null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home()).commit();
-            navigationView.setCheckedItem(R.id.nav_home);
-        }
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if(id == R.id.domestic_list)
+                    startActivity(new Intent(getApplicationContext(), ComplaintList.class));
+                else if(id == R.id.student_list)
+                    startActivity(new Intent(getApplicationContext(), StudentComplaintList.class));
+                else if(id == R.id.workplace_list)
+                    startActivity(new Intent(getApplicationContext(), WorkplaceComplaintList.class));
+                else if(id == R.id.nav_home)
+                    startActivity(new Intent(getApplicationContext(), HomePage.class));
+                else if(id == R.id.nav_domestic)
+                    startActivity(new Intent(getApplicationContext(), DomesticComplaint.class));
+                else if(id == R.id.nav_student)
+                    startActivity(new Intent(getApplicationContext(), StudentComplaint.class));
+                else if(id == R.id.nav_corporate)
+                    startActivity(new Intent(getApplicationContext(), WorkplaceComplaint.class));
+                return true;
+            }
+        });
+        displaySelectedScreen(R.id.nav_home);
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        switch(menuItem.getItemId())
-        {
-            case R.id.nav_home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home()).commit();
-                break;
-            case R.id.nav_corporate:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Corporate()).commit();
-                break;
-            case R.id.nav_domestic:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Domestic()).commit();
-                break;
-            case R.id.nav_student:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Student()).commit();
-                break;
-            case R.id.nav_others:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Other()).commit();
-                break;
-            case R.id.nav_about:
-                Toast.makeText(this,"The app is deseigned to maintain the criminal records",Toast.LENGTH_SHORT).show();
-                break;
-        }
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
-
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -79,5 +67,68 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.navigation, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        displaySelectedScreen(item.getItemId());
+        return true;
+
+    }
+    public void displaySelectedScreen(int itemId)
+    {
+        Fragment fragment=null;
+        switch(itemId)
+        {
+            case R.id.nav_home:
+                fragment=new Home();
+                break;
+            case R.id.nav_corporate:
+                fragment=new Corporate();
+                break;
+            case R.id.nav_student:
+                fragment=new Student();
+                break;
+            case R.id.nav_domestic:
+                fragment=new Domestic();
+                break;
+            case R.id.student_list:
+                fragment = new StudentFragment();
+                break;
+            case R.id.domestic_list:
+                fragment = new DomesticFragment();
+                break;
+        }
+
+        if(fragment!=null)
+        {
+            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame,fragment);
+            ft.commit();
+        }
+        DrawerLayout drawer=(DrawerLayout)findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+    }
 }

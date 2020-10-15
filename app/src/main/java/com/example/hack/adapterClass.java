@@ -29,6 +29,8 @@ public class adapterClass extends FirebaseRecyclerAdapter<ComplaintList.model, a
         viewholder.phone.setText(String.valueOf(model.getPhone()));
         viewholder.type.setText((CharSequence) model.getType());
         viewholder.description.setText(model.getDescription());
+        viewholder.email.setText(model.getDescription());
+        viewholder.address.setText(model.getDescription());
     }
 
 
@@ -40,7 +42,7 @@ public class adapterClass extends FirebaseRecyclerAdapter<ComplaintList.model, a
     }
 
     class viewholder extends RecyclerView.ViewHolder{
-        TextView name, age, phone, type, description;
+        TextView name, age, phone, type, description,email,address;
 
         public viewholder(@NonNull View itemView) {
             super(itemView);
@@ -49,6 +51,8 @@ public class adapterClass extends FirebaseRecyclerAdapter<ComplaintList.model, a
             phone = itemView.findViewById(R.id.Phone);
             type = itemView.findViewById(R.id.type);
             description = itemView.findViewById(R.id.description);
+            email = itemView.findViewById(R.id.email);
+            address = itemView.findViewById(R.id.address);
         }
     }
 }

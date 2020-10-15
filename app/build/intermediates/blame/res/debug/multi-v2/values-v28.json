@@ -4,7 +4,7 @@
             "outputFile": "C:\\Splash11\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Shaurya Chaubey\\.gradle\\caches\\transforms-2\\files-2.1\\e4482da57388568904509bde8c91385b\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\Shaurya Chaubey\\.gradle\\caches\\transforms-2\\files-2.1\\0bdc1bb9426cc18d220f338b679bc0d4\\material-1.2.1\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Shaurya Chaubey\\.gradle\\caches\\transforms-2\\files-2.1\\65c2ec9750d8dbb9f2f1b8c25f1438f4\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\Shaurya Chaubey\\.gradle\\caches\\transforms-2\\files-2.1\\5865bef9f517aac03541effd167a8116\\appcompat-1.2.0\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

@@ -1,17 +1,15 @@
 package com.example.hack;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,7 +22,7 @@ public class DomesticComplaint extends AppCompatActivity {
     private Button FirebaseButton;
 
     private DatabaseReference mDatabase;
-    private EditText Name, Contact, Description, Age;
+    private EditText Name, Contact, Description, Age, Email, Address;
     private Spinner dropdown;
     static Complaint complaint;
     long Count=0;
@@ -42,6 +40,8 @@ public class DomesticComplaint extends AppCompatActivity {
         dropdown.setAdapter(adapter);
 
         Name = findViewById(R.id.PersonName);
+        Email = findViewById(R.id.email);
+        Address = findViewById(R.id.address);
         Age = findViewById(R.id.Age);
         Contact = findViewById(R.id.Phone);
         Description = findViewById(R.id.DescribeCrime);
@@ -72,12 +72,16 @@ public class DomesticComplaint extends AppCompatActivity {
                 String getNo = Contact.getText().toString().trim();
                 String getType = dropdown.getSelectedItem().toString().trim();
                 String getDetail = Description.getText().toString().trim();
+                String getAddress = Address.getText().toString().trim();
+                String getEmail = Email.getText().toString().trim();
 
                 complaint.setName(getName);
                 complaint.setAge(getAge);
                 complaint.setPhone(getNo);
                 complaint.setType(getType);
                 complaint.setDescription(getDetail);
+                complaint.setDescription(getAddress);
+                complaint.setDescription(getEmail);
                 mDatabase.child(String.valueOf(Count+1)).setValue(complaint);
 
                 Toast.makeText(DomesticComplaint.this,"Registration Successful",Toast.LENGTH_LONG).show();
@@ -95,6 +99,8 @@ public class DomesticComplaint extends AppCompatActivity {
         private String Phone;
         private String Description;
         private String Type;
+        private String Address;
+        private String Email;
 
         public Complaint()
         {
@@ -112,6 +118,22 @@ public class DomesticComplaint extends AppCompatActivity {
         public String getAge() {
 
             return Age;
+        }
+
+        public String getAddress() {
+            return Address;
+        }
+
+        public void setAddress(String address) {
+            Address = address;
+        }
+
+        public String getEmail() {
+            return Email;
+        }
+
+        public void setEmail(String email) {
+            Email = email;
         }
 
         public void setAge(String age) {

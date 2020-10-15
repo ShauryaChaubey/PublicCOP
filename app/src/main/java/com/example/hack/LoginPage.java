@@ -1,8 +1,5 @@
 package com.example.hack;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +8,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -59,7 +59,7 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    startActivity(new Intent(LoginPage.this, HomePage.class));
+                    startActivity(new Intent(LoginPage.this, Navigation.class));
                 }
                 else {
                     Toast.makeText(LoginPage.this,"Invalid Credentials",Toast.LENGTH_SHORT).show();
@@ -74,4 +74,3 @@ public class LoginPage extends AppCompatActivity {
         startActivity(new Intent(LoginPage.this, RegistrationPage.class));
     }
 }
-

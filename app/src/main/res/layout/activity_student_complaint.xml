@@ -5,105 +5,131 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hack.StudentComplaint"
-    android:orientation="vertical"
-    android:background="#479790"
-    android:padding="20dp">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-41dp">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/backgroundimg"
+            android:gravity="center_vertical"
+            android:paddingLeft="40dp"
+            android:text="Complaint Registration"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
         <EditText
             android:id="@+id/PersonName"
             android:layout_width="321dp"
-            android:layout_height="56dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="80dp"
             android:layout_marginEnd="36dp"
             android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
+            android:background="@drawable/text_background"
             android:ems="10"
-            android:hint="  Name"
-            android:inputType="textPersonName" />
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/Age"
                 android:layout_width="70dp"
-                android:layout_height="58dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"
-                android:background="@color/colorAccent"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_background"
                 android:ems="10"
                 android:hint="  Age"
-                android:inputType="number" />
+                android:inputType="number"
+                android:paddingLeft="10dp" />
 
             <EditText
                 android:id="@+id/Phone"
                 android:layout_width="212dp"
-                android:layout_height="58dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="36dp"
-                android:layout_marginBottom="20dp"
-                android:background="@color/colorAccent"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_background"
                 android:ems="10"
                 android:hint="  Phone No."
-                android:inputType="number" />
+                android:inputType="number"
+                android:paddingLeft="15dp" />
         </LinearLayout>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="36dp"
-            android:hint="Email"
-            android:background="@color/blue"
             android:id="@+id/email"
-            />
+            android:layout_width="321dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/text_background"
+            android:hint="Email"
+            android:paddingLeft="20dp" />
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="36dp"
-            android:hint="Name of Institutions"
-            android:background="@color/blue"
             android:id="@+id/institution"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_width="321dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="36dp"
-            android:hint="Pincode"
-            android:background="@color/blue"
+            android:background="@drawable/text_background"
+            android:hint="Name of Institutions"
+            android:paddingLeft="20dp" />
+
+        <EditText
             android:id="@+id/pincode"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_width="321dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="36dp"
-            android:hint="Address"
-            android:background="@color/blue"
+            android:background="@drawable/text_background"
+            android:hint="Pincode"
+            android:paddingLeft="20dp" />
+
+        <EditText
             android:id="@+id/address"
-            />
+            android:layout_width="321dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/text_background"
+            android:hint="Address"
+            android:paddingLeft="20dp" />
 
         <Spinner
             android:id="@+id/spinner"
@@ -113,6 +139,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="36dp"
             android:layout_marginBottom="20dp"
+            android:scrollbars="vertical"
             android:background="@android:drawable/btn_dropdown"
             android:hint="  Type of Crime"
             android:spinnerMode="dropdown" />
@@ -120,27 +147,34 @@
         <EditText
             android:id="@+id/DescribeCrime"
             android:layout_width="321dp"
-            android:layout_height="56dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="36dp"
-            android:layout_marginBottom="70dp"
-            android:background="@color/colorAccent"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/text_background"
             android:ems="10"
-            android:hint="  Describe Crime"
-            android:inputType="textPersonName" />
+            android:lines="8"
+            android:minLines="6"
+            android:gravity="top|left"
+            android:maxLines="10"
+            android:hint="Describe Crime"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp" />
 
         <Button
             android:id="@+id/submit"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="130dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="50dp"
-            android:background="@color/colorAccent"
-            android:backgroundTint="@color/colorPrimary"
-            android:text="Submit" />
+            android:textSize="18sp"
+            android:background="@drawable/button_background"
+            android:text="Submit"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 

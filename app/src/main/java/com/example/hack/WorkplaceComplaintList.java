@@ -1,22 +1,17 @@
 package com.example.hack;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.widget.ListView;
-import android.widget.Spinner;
-
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
 
 public class WorkplaceComplaintList extends AppCompatActivity {
     RecyclerView Complaints;
-    workplaceAdapterClass adapter;
+    workplaceAdapterclass adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +24,7 @@ public class WorkplaceComplaintList extends AppCompatActivity {
                 new FirebaseRecyclerOptions.Builder<model>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Type1"), model.class)
                         .build();
-        adapter = new workplaceAdapterClass(options);
+        adapter = new workplaceAdapterclass(options);
         Complaints.setAdapter(adapter);
 
     }
@@ -46,15 +41,15 @@ public class WorkplaceComplaintList extends AppCompatActivity {
     }
 
     public static class model {
-        String name, age, email, pin, add, sub_category, prob, comp, other;
+        String name, age, emailId, pin, add, sub_category, prob, comp, other;
 
         model(){
 
         }
 
-        public model(String name, String age, String email, String  pin, String add, String sub_category, String prob, String comp, String other) {
+        public model(String name, String age, String emailId, String  pin, String add, String sub_category, String prob, String comp) {
             this.name = name;
-            this.email = email;
+            this.emailId = emailId;
             this.pin = pin;
             this.add = add;
             this.sub_category = sub_category;
@@ -80,11 +75,11 @@ public class WorkplaceComplaintList extends AppCompatActivity {
         }
 
         public String getEmail() {
-            return email;
+            return emailId;
         }
 
-        public void setEmail(String email) {
-            this.email = email;
+        public void setEmail(String emailId) {
+            this.emailId = emailId;
         }
 
         public String getSub_Category() {
@@ -93,14 +88,6 @@ public class WorkplaceComplaintList extends AppCompatActivity {
 
         public void setSub_Category(String sub_category) {
             this.sub_category = sub_category;
-        }
-
-        public void setOther(String other) {
-            this.other = other;
-        }
-
-        public String getOther() {
-            return other;
         }
 
         public String getPin() {
@@ -123,7 +110,7 @@ public class WorkplaceComplaintList extends AppCompatActivity {
             return prob;
         }
 
-        public void setProb(String email) {
+        public void setProb(String emailId) {
             this.prob = prob;
         }
 
