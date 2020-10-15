@@ -27,7 +27,7 @@ public class ComplaintList extends AppCompatActivity {
 
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Complaint"), model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Type2"), model.class)
                         .build();
         adapter = new adapterClass(options);
         Complaints.setAdapter(adapter);

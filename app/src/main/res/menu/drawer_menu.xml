@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single" >
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_24"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_corporate"
+            android:icon="@drawable/ic_corporate"
+            android:title="Corporate Sector" />
+        <item
+            android:id="@+id/nav_domestic"
+            android:icon="@drawable/ic_domestic"
+            android:title="Domestic Sector" />
+        <item
+            android:id="@+id/nav_student"
+            android:icon="@drawable/ic_student"
+            android:title="Student Sector" />
+        <item
+            android:id="@+id/nav_others"
+            android:icon="@drawable/ic_others"
+            android:title="Others" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_about"
+                android:title="About" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+
+    </item>
+</menu>
