@@ -1,7 +1,5 @@
 package com.example.hack;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -10,7 +8,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputLayout;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -81,6 +81,10 @@ public class StudentComplaint extends AppCompatActivity {
                 String getInstitutions = Institution.getText().toString().trim();
 
 
+                complaint.setAddress(getAddress);
+                complaint.setPincode(getPincode);
+                complaint.setEmail(getEmail);
+                complaint.setInstitution(getInstitutions);
                 complaint.setName(getName);
                 complaint.setAge(getAge);
                 complaint.setPhone(getNo);
@@ -103,6 +107,11 @@ public class StudentComplaint extends AppCompatActivity {
         private String Phone;
         private String Description;
         private String Type, Institution, Address, Pincode, Email;
+
+        public Complaint()
+        {
+
+        }
 
         public String getInstitution() {
             return Institution;
@@ -134,11 +143,6 @@ public class StudentComplaint extends AppCompatActivity {
 
         public void setEmail(String email) {
             Email = email;
-        }
-
-        public Complaint()
-        {
-
         }
 
         public String getName() {

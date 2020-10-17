@@ -15,9 +15,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    NavigationView navigationView;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +31,12 @@ public class Navigation extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        /**/
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -51,11 +55,27 @@ public class Navigation extends AppCompatActivity
                     startActivity(new Intent(getApplicationContext(), StudentComplaint.class));
                 else if(id == R.id.nav_corporate)
                     startActivity(new Intent(getApplicationContext(), WorkplaceComplaint.class));
+                else if(id ==R.id.nav_logout)
+                    logout();
+                else if(id == R.id.nav_about)
+                    startActivity(new Intent(getApplicationContext(), About.class));
                 return true;
+            }
+
+            private void logout() {
+                firebaseAuth.signOut(); //sign out of the current account and move to login page
+                startActivity(new Intent(getApplicationContext(), LoginPage.class));
             }
         });
         displaySelectedScreen(R.id.nav_home);
     }
+    /*private void hideItem()
+    {
+        Menu nav_Menu = navigationView.getMenu();
+        nav_Menu.findItem(R.id.domestic_list).setVisible(false);
+        nav_Menu.findItem(R.id.student_list).setVisible(false);
+        nav_Menu.findItem(R.id.workplace_list).setVisible(false);
+    }*/
 
     @Override
     public void onBackPressed() {

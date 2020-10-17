@@ -80,8 +80,8 @@ public class DomesticComplaint extends AppCompatActivity {
                 complaint.setPhone(getNo);
                 complaint.setType(getType);
                 complaint.setDescription(getDetail);
-                complaint.setDescription(getAddress);
-                complaint.setDescription(getEmail);
+                complaint.setAddress(getAddress);
+                complaint.setEmail(getEmail);
                 mDatabase.child(String.valueOf(Count+1)).setValue(complaint);
 
                 Toast.makeText(DomesticComplaint.this,"Registration Successful",Toast.LENGTH_LONG).show();

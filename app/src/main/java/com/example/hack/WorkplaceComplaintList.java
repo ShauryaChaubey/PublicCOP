@@ -41,21 +41,21 @@ public class WorkplaceComplaintList extends AppCompatActivity {
     }
 
     public static class model {
-        String name, age, emailId, pin, add, sub_category, prob, comp, other;
+        String name, age, email, pin, add, sub_category, prob, comp, other;
 
         model(){
 
         }
 
-        public model(String name, String age, String emailId, String  pin, String add, String sub_category, String prob, String comp) {
+        public model(String name, String age, String email, String  pin, String add, String sub_category, String prob, String comp) {
             this.name = name;
-            this.emailId = emailId;
+            this.email = email;
             this.pin = pin;
             this.add = add;
             this.sub_category = sub_category;
             this.prob = prob;
             this.comp = comp;
-            this.other = other;
+            this.age = age;
         }
 
         public String getName() {
@@ -75,11 +75,11 @@ public class WorkplaceComplaintList extends AppCompatActivity {
         }
 
         public String getEmail() {
-            return emailId;
+            return email;
         }
 
-        public void setEmail(String emailId) {
-            this.emailId = emailId;
+        public void setEmail(String email) {
+            this.email = email;
         }
 
         public String getSub_Category() {
@@ -110,7 +110,7 @@ public class WorkplaceComplaintList extends AppCompatActivity {
             return prob;
         }
 
-        public void setProb(String emailId) {
+        public void setProb(String prob) {
             this.prob = prob;
         }
 

@@ -5,84 +5,108 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="5dp"
     android:elevation="4dp"
+    android:layout_marginBottom="30dp"
     app:cardUseCompatPadding="true"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#CB670917"
+        android:background="#064894"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:padding="5dp" />
+            android:layout_margin="10dp"
+            android:background="#AFABAB"
+            android:padding="5dp"
+            android:textColor="@android:color/black" />
 
         <LinearLayout
-            android:layout_width="399dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/age"
-                android:layout_width="120dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:padding="5dp" />
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#AFABAB"
+                android:padding="5dp"
+                android:textColor="@android:color/black" />
 
             <TextView
-                android:id="@+id/contact"
-                android:layout_width="210dp"
+                android:id="@+id/institution"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:padding="5dp" />
+                android:layout_margin="10dp"
+                android:layout_weight="2"
+                android:background="#AFABAB"
+                android:padding="5dp"
+                android:textColor="@android:color/black" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/pin"
+            android:id="@+id/pincode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:padding="5dp" />
+            android:layout_margin="10dp"
+            android:background="#AFABAB"
+            android:padding="5dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#AFABAB"
+            android:padding="5dp"
+            android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:padding="5dp" />
+            android:layout_margin="10dp"
+            android:background="#AFABAB"
+            android:padding="5dp"
+            android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:padding="5dp" />
+            android:layout_margin="10dp"
+            android:background="#AFABAB"
+            android:padding="5dp"
+            android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/sub_category"
+            android:id="@+id/type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:padding="5dp" />
+            android:layout_margin="10dp"
+            android:background="#AFABAB"
+            android:padding="5dp"
+            android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/prob"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:padding="5dp" />
-
-
-        <TextView
-            android:id="@+id/institution"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:padding="5dp" />
+            android:layout_margin="10dp"
+            android:background="#AFABAB"
+            android:padding="5dp"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 
 

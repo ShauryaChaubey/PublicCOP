@@ -1,14 +1,14 @@
 package com.example.hack;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -66,8 +66,20 @@ public class RegistrationPage extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()) {
-                        Toast.makeText(RegistrationPage.this, "Sign up complete", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(RegistrationPage.this,LoginPage.class));
+                        firebaseAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                               if(task.isSuccessful())
+                               {
+                                   Toast.makeText(RegistrationPage.this, "Registration complete,Please verify your email ID", Toast.LENGTH_SHORT).show();
+                                   startActivity(new Intent(RegistrationPage.this,LoginPage.class));
+                               }
+                               else {
+                                   Toast.makeText(RegistrationPage.this, "Sign up failed", Toast.LENGTH_SHORT).show();
+                               }
+                            }
+                        });
+
                     }
                     else {
                         Toast.makeText(RegistrationPage.this, "Sign up failed", Toast.LENGTH_SHORT).show();

@@ -1,10 +1,10 @@
 package com.example.hack;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.os.DropBoxManager;
 import android.util.Log;
 import android.view.View;
 
@@ -25,10 +25,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
-
-import static android.media.CamcorderProfile.get;
 
 
 public class HomePage extends AppCompatActivity {
@@ -42,6 +38,7 @@ public class HomePage extends AppCompatActivity {
 
     static HashMap<String, Float> crimeCount;
 
+    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +47,8 @@ public class HomePage extends AppCompatActivity {
         pieChart = findViewById(R.id.pieChart);
 
         crimeCount = new HashMap<String, Float>();
+
+        typeCount = new ArrayList<>();
 
         countNumber();
 
@@ -60,7 +59,6 @@ public class HomePage extends AppCompatActivity {
 
         //getting type 1  type 1 - workplace, type 2- domestic. type 3- student
 
-        typeCount = new ArrayList<>();
 
         for(int i = 1; i <= 3; i++)
         {
@@ -73,10 +71,11 @@ public class HomePage extends AppCompatActivity {
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if (snapshot.exists())
                         val[0] = ((int) snapshot.getChildrenCount());
-
-
                     typeCount.add(val[0]);
                     totalCount += val[0];
+                    Log.i("Pie Chart Value: ", String.valueOf(val[0]));
+
+                    pieChartFunc();
 
                 }
 
@@ -86,7 +85,6 @@ public class HomePage extends AppCompatActivity {
                 }
             });
         }
-        pieChartFunc();
 
     }
 
@@ -95,9 +93,12 @@ public class HomePage extends AppCompatActivity {
 
 
             ArrayList<PieEntry> types = new ArrayList<PieEntry>();
+            Log.i("typeCount size", String.valueOf(typeCount.size()));
 
             for (int i = 0; i < typeCount.size(); i++) {
                 Float value = (typeCount.get(i) / (float) totalCount) * 100.0f;
+
+                Log.i("Pie Chart Entry", "value: "+value+" type: "+category[i]);
 
                 types.add(new PieEntry(value, category[i]));
 
@@ -118,26 +119,23 @@ public class HomePage extends AppCompatActivity {
             pieChart.setRotationEnabled(true);
             pieChart.setCenterText("Complaints");
             pieChart.setAlpha(0.8f);
-            pieChart.animate();
+            pieChart.animateXY(1000, 1000);
 
         }
 
-
-    public void workplace (View view)
-    {
-        startActivity(new Intent(HomePage.this, WorkplaceComplaint.class));
+    public void toNavBar(View view) {
+        startActivity(new Intent(HomePage.this, Navigation.class));
     }
 
-    public void domestic (View view)
-    {
-        startActivity(new Intent(HomePage.this, DomesticComplaint.class));
+    public void goToWorkplacePie(View view) {
+        startActivity(new Intent(HomePage.this, WorkplacePieChart.class));
     }
 
-    public void student(View view) {
-        startActivity(new Intent(HomePage.this, StudentComplaint.class));
+    public void goToStudentPie(View view) {
+        startActivity(new Intent(HomePage.this, StudentPieChart.class));
     }
 
-    public void seeAllComplaints(View view) {
-        startActivity(new Intent(HomePage.this, ComplaintList.class));
+    public void goToDomesticPie(View view) {
+        startActivity(new Intent(HomePage.this, DomesticPieChart.class));
     }
 }

@@ -22,7 +22,7 @@ public class WorkplaceComplaint extends AppCompatActivity implements AdapterView
 
     private EditText nameText, ageText, address, pincode, email, subCategory, company, problem, otherType;
     private Spinner spinner;
-    private String name, age, emailId, pin, add, sub_category, prob, comp, other;
+    private String name, age, emailID, pin, add, sub_category, prob, comp, other;
 
     NewCrimeComplaint complaint;
     public static DatabaseReference ref;
@@ -52,7 +52,6 @@ public class WorkplaceComplaint extends AppCompatActivity implements AdapterView
                 if(snapshot.exists())
                     count = (int) snapshot.getChildrenCount();
                 Log.i("main ", String.valueOf(count));
-                Toast.makeText(WorkplaceComplaint.this, "Registered!!", Toast.LENGTH_SHORT).show();
 
             }
 
@@ -84,7 +83,7 @@ public class WorkplaceComplaint extends AppCompatActivity implements AdapterView
         age = ageText.getText().toString().trim();
         add = address.getText().toString().trim();
         pin = pincode.getText().toString().trim();
-        emailId = email.getText().toString().trim();
+        emailID = email.getText().toString().trim();
         comp = company.getText().toString().trim();
         prob = problem.getText().toString().trim();
 
@@ -93,7 +92,7 @@ public class WorkplaceComplaint extends AppCompatActivity implements AdapterView
         Log.i("Name:",name);
         Log.i("Age:",age);
         Log.i("Address:",add);
-        Log.i("Email id:",emailId);
+        Log.i("Email id:",emailID);
         Log.i("Pincode:",pin);
         Log.i("Company:",comp);
         Log.i("Problem:",prob);
@@ -108,13 +107,14 @@ public class WorkplaceComplaint extends AppCompatActivity implements AdapterView
         complaint.setName(name);
         complaint.setComp(comp);
         complaint.setAdd(add);
-        complaint.setEmailId(emailId);
+        complaint.setEmailId(emailID);
         complaint.setSub_category(sub_category);
         complaint.setPin(pin);
         complaint.setProb(prob);
         complaint.setOther(other);
 
         ref.child(String.valueOf((count+1))).setValue(complaint);
+        Toast.makeText(WorkplaceComplaint.this, "Registration Successful", Toast.LENGTH_SHORT).show();
     }
 
 

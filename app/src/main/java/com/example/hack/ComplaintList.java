@@ -1,18 +1,13 @@
 package com.example.hack;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.widget.ListView;
-import android.widget.Spinner;
-
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
 
 public class ComplaintList extends AppCompatActivity {
     RecyclerView Complaints;
@@ -46,18 +41,21 @@ public class ComplaintList extends AppCompatActivity {
     }
 
     public static class model {
-        String name,description,age,phone,type;
+        String name,description,age,phone,type,address,email;
 
         model(){
 
         }
 
-        public model(String name, String description, String type, String age, String phone) {
+        public model(String name, String description, String type, String age, String phone,String address, String email) {
             this.name = name;
             this.description = description;
             this.age = age;
             this.type = type;
             this.phone = phone;
+            this.address = address;
+            this.email = email;
+
         }
 
         public String getName() {
@@ -98,6 +96,22 @@ public class ComplaintList extends AppCompatActivity {
 
         public void setType(String type) {
             this.type = type;
+        }
+
+        public String getAddress() {
+            return address;
+        }
+
+        public void setAddress(String address) {
+            this.address = address;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public void setEmail(String email) {
+            this.email = email;
         }
     }
 }

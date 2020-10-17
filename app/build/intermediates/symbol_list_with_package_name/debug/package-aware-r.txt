@@ -1605,6 +1605,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable building
 drawable button_background
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -1631,9 +1632,12 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dom
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable home
 drawable ic_about
+drawable ic_baseline_list_alt_24
 drawable ic_corporate
 drawable ic_domestic
 drawable ic_home_24
@@ -1652,7 +1656,9 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_others
 drawable ic_student
+drawable list
 drawable logo
+drawable logout
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
 drawable material_ic_edit_black_24dp
@@ -1684,11 +1690,14 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable oip
 drawable oip1
+drawable schhool
+drawable school
 drawable side_nav_bar
 drawable test_custom_background
 drawable text_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable workplace
 font bungee
 id ALT
 id Age
@@ -1697,6 +1706,7 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id DescribeCrime
+id DomesticPieChart
 id FUNCTION
 id META
 id NO_DEBUG
@@ -1707,8 +1717,10 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
+id StudentPieChart
 id TOP_END
 id TOP_START
+id WorkPieChart
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1774,7 +1786,6 @@ id age_applicant
 id alertTitle
 id aligned
 id all
-id allComplaints
 id always
 id animateToEnd
 id animateToStart
@@ -1818,7 +1829,6 @@ id collapseActionView
 id comp
 id company
 id confirm_button
-id contact
 id container
 id content
 id contentPanel
@@ -1848,7 +1858,6 @@ id direct
 id disableHome
 id disablePostScroll
 id disableScroll
-id domestic
 id domestic_list
 id dragDown
 id dragEnd
@@ -1902,6 +1911,7 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView2
 id img
 id info
 id institution
@@ -1918,6 +1928,7 @@ id light
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
 id logo
@@ -1963,9 +1974,6 @@ id nav_corporate
 id nav_domestic
 id nav_home
 id nav_logout
-id nav_others
-id nav_send
-id nav_share
 id nav_student
 id nav_view
 id navigation_header_container
@@ -1993,6 +2001,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id phone
 id pieChart
 id pin
 id pincode
@@ -2072,7 +2081,6 @@ id staticPostLayout
 id status_bar_latest_event_content
 id stop
 id stretch
-id student
 id student_list
 id sub_category
 id sub_category_spinner
@@ -2099,6 +2107,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView2
+id textView3
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -2136,7 +2146,6 @@ id visible
 id wide
 id withText
 id withinBounds
-id workplace
 id workplace_list
 id wrap
 id wrap_content
@@ -2202,8 +2211,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_about
 layout activity_complaint_list
 layout activity_domestic_complaint
+layout activity_domestic_pie_chart
 layout activity_home_page
 layout activity_intro
 layout activity_login_page
@@ -2212,8 +2223,10 @@ layout activity_navigation
 layout activity_registration_page
 layout activity_student_complaint
 layout activity_student_complaint_list
+layout activity_student_pie_chart
 layout activity_workplace_complaint
 layout activity_workplace_complaint_list
+layout activity_workplace_pie_chart
 layout app_bar_navigation
 layout content_navigation
 layout custom_dialog

@@ -20,11 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="30dp"
-<<<<<<< HEAD
-            android:background="@drawable/backgroundimg"
-=======
             android:background="@drawable/background"
->>>>>>> cf0d1b1dc3e99ffa2bd068b4fe418fe964e72625
             android:gravity="center_vertical"
             android:paddingLeft="40dp"
             android:text="Complaint Registration"
@@ -142,17 +138,9 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
-<<<<<<< HEAD
-            android:layout_marginEnd="36dp"
-            android:layout_marginBottom="20dp"
-            android:scrollbars="vertical"
-            android:background="@android:drawable/btn_dropdown"
-            android:hint="  Type of Crime"
-=======
             android:layout_marginEnd="40dp"
             android:background="#E2E2E2"
             android:hint="Type of Crime"
->>>>>>> cf0d1b1dc3e99ffa2bd068b4fe418fe964e72625
             android:spinnerMode="dropdown" />
 
         <EditText

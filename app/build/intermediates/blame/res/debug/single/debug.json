@@ -20,12 +20,20 @@
         "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\bg4.jpg"
     },
     {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dom.jpg.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\dom.jpg"
+    },
+    {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_navigation.xml.flat",
         "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\activity_navigation.xml"
     },
     {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Splash11\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_workplace.png.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\workplace.png"
     },
     {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registration_page.xml.flat",
@@ -76,12 +84,12 @@
         "source": "C:\\Splash11\\app\\src\\main\\res\\menu\\drawer_menu.xml"
     },
     {
-        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Splash11\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_slideshow.xml.flat",
         "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_manage.xml.flat",
@@ -104,16 +112,20 @@
         "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\activity_intro.xml"
     },
     {
-        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_student.xml.flat",
-        "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\fragment_student.xml"
-    },
-    {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header_navigation.xml.flat",
         "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\nav_header_navigation.xml"
     },
     {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_student.xml.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\fragment_student.xml"
+    },
+    {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_share.xml.flat",
         "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\ic_menu_share.xml"
+    },
+    {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_list.webp.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\drawable-v24\\list.webp"
     },
     {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_others.xml.flat",
@@ -140,6 +152,10 @@
         "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\ic_domestic.xml"
     },
     {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_list.webp.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\list.webp"
+    },
+    {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_navigation.xml.flat",
         "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\app_bar_navigation.xml"
     },
@@ -154,6 +170,10 @@
     {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_workplacesingleview.xml.flat",
         "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\workplacesingleview.xml"
+    },
+    {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_about.xml.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\activity_about.xml"
     },
     {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.jpg.flat",
@@ -184,6 +204,18 @@
         "source": "C:\\Splash11\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_workplace_pie_chart.xml.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\activity_workplace_pie_chart.xml"
+    },
+    {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_student_pie_chart.xml.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\activity_student_pie_chart.xml"
+    },
+    {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_domestic_pie_chart.xml.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\activity_domestic_pie_chart.xml"
+    },
+    {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_student_complaint.xml.flat",
         "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\activity_student_complaint.xml"
     },
@@ -206,6 +238,10 @@
     {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background.xml.flat",
         "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\background.xml"
+    },
+    {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_list_alt_24.xml.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\ic_baseline_list_alt_24.xml"
     },
     {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header.xml.flat",
@@ -244,6 +280,10 @@
         "source": "C:\\Splash11\\app\\src\\main\\res\\menu\\navigation.xml"
     },
     {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logout.webp.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\logout.webp"
+    },
+    {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home_page.xml.flat",
         "source": "C:\\Splash11\\app\\src\\main\\res\\layout\\activity_home_page.xml"
     },
@@ -262,6 +302,22 @@
     {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_camera.xml.flat",
         "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_schhool.webp.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\schhool.webp"
+    },
+    {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_building.png.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\building.png"
+    },
+    {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_home.webp.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\home.webp"
+    },
+    {
+        "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_school.webp.flat",
+        "source": "C:\\Splash11\\app\\src\\main\\res\\drawable\\school.webp"
     },
     {
         "merged": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\drawable_oip1.jpg.flat",

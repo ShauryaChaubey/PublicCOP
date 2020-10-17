@@ -22,6 +22,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.hack.About" />
+        <activity android:name="com.example.hack.WorkplacePieChart" />
+        <activity android:name="com.example.hack.StudentPieChart" />
+        <activity android:name="com.example.hack.DomesticPieChart" />
         <activity android:name="com.example.hack.StudentComplaintList" />
         <activity android:name="com.example.hack.WorkplaceComplaintList" />
         <activity android:name="com.example.hack.Navigation" />

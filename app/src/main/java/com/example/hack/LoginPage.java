@@ -26,7 +26,7 @@ public class LoginPage extends AppCompatActivity {
 
     FirebaseAuth firebaseAuth;
 
-    CheckBox adminCheck;
+    static CheckBox adminCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +59,14 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    if (firebaseAuth.getCurrentUser().isEmailVerified())
+                    {
                     startActivity(new Intent(LoginPage.this, Navigation.class));
                 }
+                    else
+                    {
+                        Toast.makeText(LoginPage.this,"please verify your email ID",Toast.LENGTH_SHORT).show();
+                    }}
                 else {
                     Toast.makeText(LoginPage.this,"Invalid Credentials",Toast.LENGTH_SHORT).show();
                 }

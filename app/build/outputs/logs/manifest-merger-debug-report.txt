@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-36:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Shaurya Chaubey\.gradle\caches\transforms-2\files-2.1\530c1c969263622fa705cd61027e4a47\constraintlayout-2.0.2\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Shaurya Chaubey\.gradle\caches\transforms-2\files-2.1\0bdc1bb9426cc18d220f338b679bc0d4\material-1.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.airbnb.android:lottie:3.4.1] C:\Users\Shaurya Chaubey\.gradle\caches\transforms-2\files-2.1\50eefd3e1a63f0840c8496b7b0cae8a6\jetified-lottie-3.4.1\AndroidManifest.xml:2:1-11:12
@@ -56,25 +56,25 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Shaurya Chaub
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Shaurya Chaubey\.gradle\caches\transforms-2\files-2.1\ebe904cddbe07e1e19fa9ed52e885ab5\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Shaurya Chaubey\.gradle\caches\transforms-2\files-2.1\1388fe5d372779ba856d80df221b91e2\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Shaurya Chaubey\.gradle\caches\transforms-2\files-2.1\e8420a3d5ad268fd044ca39494eefb4b\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:3:5-31
 		INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-32:12
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-36:12
 		INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-32:12
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:2:1-36:12
 		INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:5:5-30:19
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:5:5-34:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Shaurya Chaubey\.gradle\caches\transforms-2\files-2.1\530c1c969263622fa705cd61027e4a47\constraintlayout-2.0.2\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Shaurya Chaubey\.gradle\caches\transforms-2\files-2.1\530c1c969263622fa705cd61027e4a47\constraintlayout-2.0.2\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Shaurya Chaubey\.gradle\caches\transforms-2\files-2.1\0bdc1bb9426cc18d220f338b679bc0d4\material-1.2.1\AndroidManifest.xml:22:5-20
@@ -113,64 +113,80 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Sh
 		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.hack.About
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:12:9-52
+	android:name
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:12:19-40
+activity#com.example.hack.WorkplacePieChart
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:13:9-55
+	android:name
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:13:19-52
+activity#com.example.hack.StudentPieChart
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:14:9-53
+	android:name
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:14:19-50
+activity#com.example.hack.DomesticPieChart
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:15:9-54
+	android:name
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:15:19-51
 activity#com.example.hack.StudentComplaintList
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:12:9-67
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:16:9-58
 	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:12:19-55
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:16:19-55
 activity#com.example.hack.WorkplaceComplaintList
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:13:9-60
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:17:9-60
 	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:13:19-57
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:17:19-57
 activity#com.example.hack.Navigation
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:14:9-47
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:18:9-48
 	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:14:19-45
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:18:19-45
 activity#com.example.hack.ComplaintList
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:15:9-51
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:19:9-51
 	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:15:19-48
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:19:19-48
 activity#com.example.hack.StudentComplaint
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:16:9-54
-	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:16:19-51
-activity#com.example.hack.WorkplaceComplaint
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:17:9-56
-	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:17:19-53
-activity#com.example.hack.DomesticComplaint
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:18:9-55
-	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:18:19-52
-activity#com.example.hack.HomePage
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:19:9-46
-	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:19:19-43
-activity#com.example.hack.RegistrationPage
 ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:20:9-54
 	android:name
 		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:20:19-51
+activity#com.example.hack.WorkplaceComplaint
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:21:9-56
+	android:name
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:21:19-53
+activity#com.example.hack.DomesticComplaint
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:22:9-55
+	android:name
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:22:19-52
+activity#com.example.hack.HomePage
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:23:9-46
+	android:name
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:23:19-43
+activity#com.example.hack.RegistrationPage
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:24:9-54
+	android:name
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:24:19-51
 activity#com.example.hack.LoginPage
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:21:9-47
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:25:9-47
 	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:21:19-44
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:25:19-44
 activity#com.example.hack.Intro
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:22:9-28:20
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:26:9-32:20
 	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:22:19-40
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:26:19-40
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:30:27-74
 activity#com.example.hack.MainActivity
-ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:29:9-50
+ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:33:9-50
 	android:name
-		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:29:19-47
+		ADDED from C:\Splash11\app\src\main\AndroidManifest.xml:33:19-47
 uses-sdk
 INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Splash11\app\src\main\AndroidManifest.xml

@@ -18,11 +18,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-<<<<<<< HEAD
-            android:background="@drawable/backgroundimg"
-=======
             android:background="@drawable/background"
->>>>>>> cf0d1b1dc3e99ffa2bd068b4fe418fe964e72625
             android:textColor="#FFFFFF"
             android:text="Complaint Registration"
             android:textSize="18sp"
@@ -43,7 +39,6 @@
             android:paddingLeft="20dp"
             android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
-<<<<<<< HEAD
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="36dp"
@@ -72,8 +67,6 @@
             android:paddingLeft="20dp"
             android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
-=======
->>>>>>> cf0d1b1dc3e99ffa2bd068b4fe418fe964e72625
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="36dp"
@@ -128,22 +121,14 @@
             android:layout_marginEnd="36dp"
             android:layout_marginBottom="20dp"
             android:layout_gravity="center_horizontal"
-<<<<<<< HEAD
             android:background="@android:drawable/btn_dropdown"
-=======
-            android:background="#E2E2E2"
->>>>>>> cf0d1b1dc3e99ffa2bd068b4fe418fe964e72625
             android:hint="  Type of Crime"
             android:spinnerMode="dropdown" />
 
         <EditText
             android:id="@+id/DescribeCrime"
             android:layout_width="321dp"
-<<<<<<< HEAD
-            android:layout_height="wrap_content"
-=======
             android:layout_height="40dp"
->>>>>>> cf0d1b1dc3e99ffa2bd068b4fe418fe964e72625
             android:layout_marginStart="30dp"
             android:paddingLeft="20dp"
             android:layout_marginTop="20dp"
@@ -151,17 +136,12 @@
             android:layout_marginBottom="50dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/text_background"
-<<<<<<< HEAD
             android:gravity="top|left"
             android:hint="Describe Crime"
             android:lines="8"
             android:maxLines="10"
-            android:minLines="6" />
-=======
             android:ems="10"
-            android:hint="Describe Crime"
             android:inputType="textPersonName" />
->>>>>>> cf0d1b1dc3e99ffa2bd068b4fe418fe964e72625
 
         <Button
             android:id="@+id/submit"

@@ -24,13 +24,13 @@ public class adapterClass extends FirebaseRecyclerAdapter<ComplaintList.model, a
 
     @Override
     protected void onBindViewHolder(@NonNull viewholder viewholder, int i, @NonNull ComplaintList.model model) {
-        viewholder.name.setText(model.getName());
-        viewholder.age.setText(String.valueOf(model.getAge()));
-        viewholder.phone.setText(String.valueOf(model.getPhone()));
-        viewholder.type.setText((CharSequence) model.getType());
-        viewholder.description.setText(model.getDescription());
-        viewholder.email.setText(model.getDescription());
-        viewholder.address.setText(model.getDescription());
+        viewholder.name.setText("Name: "+ model.getName());
+        viewholder.age.setText(String.valueOf("Age: " + model.getAge()));
+        viewholder.phone.setText(String.valueOf("Phone No.: "+ model.getPhone()));
+        viewholder.type.setText("Crime Type: " + (CharSequence) model.getType());
+        viewholder.description.setText("Crime Description: " + model.getDescription());
+        viewholder.email.setText("Email: " + model.getEmail());
+        viewholder.address.setText("Address: " + model.getAddress());
     }
 
 

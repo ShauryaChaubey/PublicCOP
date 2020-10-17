@@ -25,14 +25,14 @@ public class workplaceAdapterclass extends FirebaseRecyclerAdapter<WorkplaceComp
 
     @Override
     protected void onBindViewHolder(@NonNull workplaceAdapterclass.viewholder viewholder, int i, @NonNull WorkplaceComplaintList.model model) {
-        viewholder.name.setText(model.getName());
-        viewholder.age.setText(String.valueOf(model.getAge()));
-        viewholder.emailId.setText(String.valueOf(model.getEmail()));
-        viewholder.pin.setText(String.valueOf(model.getPin()));
-        viewholder.prob.setText(String.valueOf(model.getProb()));
-        viewholder.add.setText(String.valueOf(model.getAdd()));
-        viewholder.sub_category.setText(String.valueOf(model.getSub_Category()));
-        viewholder.comp.setText(String.valueOf(model.getComp()));
+        viewholder.name.setText("Name: " + model.getName());
+        viewholder.age.setText("Age: " + String.valueOf(model.getAge()));
+        viewholder.email.setText("Email: " +String.valueOf(model.getEmail()));
+        viewholder.pin.setText("Pin: " + String.valueOf(model.getPin()));
+        viewholder.prob.setText("Crime Description: " + String.valueOf(model.getProb()));
+        viewholder.add.setText("Address: " + String.valueOf(model.getAdd()));
+        viewholder.sub_category.setText("Crime Type: " + String.valueOf(model.getSub_Category()));
+        viewholder.comp.setText("Company: " + String.valueOf(model.getComp()));
     }
 
 
@@ -44,17 +44,17 @@ public class workplaceAdapterclass extends FirebaseRecyclerAdapter<WorkplaceComp
     }
 
     class viewholder extends RecyclerView.ViewHolder{
-        TextView name, age, pin, add, prob, sub_category, emailId, comp;
+        TextView name, age, pin, add, prob, sub_category, email, comp;
 
         public viewholder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.name);
             age = itemView.findViewById(R.id.age);
-            emailId= itemView.findViewById(R.id.email);
-            pin = itemView.findViewById(R.id.pincode);
+            email = itemView.findViewById(R.id.email);
+            pin = itemView.findViewById(R.id.pin);
             sub_category = itemView.findViewById(R.id.sub_category);
             comp = itemView.findViewById(R.id.comp);
-            add = itemView.findViewById(R.id.add);
+            add = itemView.findViewById(R.id.address);
             prob = itemView.findViewById(R.id.prob);
         }
     }

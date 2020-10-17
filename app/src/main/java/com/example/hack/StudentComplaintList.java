@@ -1,18 +1,13 @@
 package com.example.hack;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.widget.ListView;
-import android.widget.Spinner;
-
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
 
 public class StudentComplaintList extends AppCompatActivity {
     RecyclerView Complaints;
@@ -46,22 +41,22 @@ public class StudentComplaintList extends AppCompatActivity {
     }
 
     public static class model {
-        String name,description,age,type, email, pin, add, sub_category, contact, institution;
+        String name,description,age,type, email, pincode, address, phone, institution;
 
         model(){
 
         }
 
-        public model(String name, String contact, String description, String age, String add, String email, String pin, String institution) {
+        public model(String name, String phone, String description, String age, String address, String email, String pincode, String institution) {
             this.name = name;
             this.description = description;
             this.email = email;
-            this.pin = pin;
-            this.add = add;
+            this.pincode = pincode;
+            this.address = address;
             this.age = age;
-            this.sub_category = sub_category;
+            this.type = type;
             this.institution = institution;
-            this.contact = contact;
+            this.phone = phone;
         }
 
         public String getName() {
@@ -96,36 +91,36 @@ public class StudentComplaintList extends AppCompatActivity {
             this.email = email;
         }
 
-        public String getSub_Category() {
-            return sub_category;
+        public String getType() {
+            return type;
         }
 
-        public void setSub_Category(String sub_category) {
-            this.sub_category = sub_category;
+        public void setType(String type) {
+            this.type = type;
         }
 
-        public void setContact(String contact) {
-            this.contact = contact;
+        public void setPhone(String phone) {
+            this.phone = phone;
         }
 
-        public String getContact() {
-            return contact;
+        public String getPhone() {
+            return phone;
         }
 
-        public String getPin() {
-            return pin;
+        public String getPincode() {
+            return pincode;
         }
 
-        public void setPin(String prob) {
-            this.pin = pin;
+        public void setPincode(String pincode) {
+            this.pincode = pincode;
         }
 
-        public String getAdd() {
-            return add;
+        public String getAddress() {
+            return address;
         }
 
-        public void setAddress(String add) {
-            this.add = add;
+        public void setAddress(String address) {
+            this.address = address;
         }
 
         public String getInstitution() {

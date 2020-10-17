@@ -22,9 +22,19 @@
             android:icon="@drawable/ic_student"
             android:title="Student Sector" />
         <item
-            android:id="@+id/nav_others"
-            android:icon="@drawable/ic_others"
-            android:title="Others" />
+            android:id="@+id/workplace_list"
+            android:icon="@drawable/ic_baseline_list_alt_24"
+            android:title="Workplace List"/>
+
+        <item
+            android:id="@+id/domestic_list"
+            android:icon="@drawable/ic_baseline_list_alt_24"
+            android:title="Domestic List"/>
+
+        <item
+            android:id="@+id/student_list"
+            android:icon="@drawable/ic_baseline_list_alt_24"
+            android:title="Student List"/>
     </group>
 
     <item android:title="Communicate">

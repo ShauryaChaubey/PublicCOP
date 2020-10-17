@@ -18,6 +18,6 @@ public class Home extends Fragment {
     }
     public void onViewCreated(View view,Bundle savedInstanceState){
         super.onViewCreated(view,savedInstanceState);
-        getActivity().setTitle("Student Complaint List");
+        getActivity().setTitle("Home Page");
     }
 }

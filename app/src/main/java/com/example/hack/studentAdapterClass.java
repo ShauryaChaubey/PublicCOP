@@ -25,37 +25,38 @@ public class studentAdapterClass extends FirebaseRecyclerAdapter<StudentComplain
 
     @Override
     protected void onBindViewHolder(@NonNull studentAdapterClass.viewholder viewholder, int i, @NonNull StudentComplaintList.model model) {
-        viewholder.name.setText(model.getName());
-        viewholder.age.setText(String.valueOf(model.getAge()));
-        viewholder.email.setText(String.valueOf(model.getEmail()));
-        viewholder.pin.setText(String.valueOf(model.getPin()));
-        viewholder.institution.setText(String.valueOf(model.getInstitution()));
-        viewholder.address.setText(String.valueOf(model.getAdd()));
-        viewholder.sub_category.setText(String.valueOf(model.getSub_Category()));
-        viewholder.description.setText(String.valueOf(model.getDescription()));
-        viewholder.contact.setText(String.valueOf(model.getContact()));
+        viewholder.name.setText("Name: " + model.getName());
+        viewholder.age.setText("Age: " + String.valueOf(model.getAge()));
+        viewholder.email.setText("Email: " + String.valueOf(model.getEmail()));
+        viewholder.pincode.setText("Pin: " + String.valueOf(model.getPincode()));
+        viewholder.institution.setText("Institution: " + String.valueOf(model.getInstitution()));
+        viewholder.address.setText("Address: " + String.valueOf(model.getAddress()));
+        viewholder.type.setText("Crime Type: " + (CharSequence) model.getType());
+        viewholder.description.setText("Crime Description: " + String.valueOf(model.getDescription()));
+        viewholder.phone.setText("Phone No.: " + String.valueOf(model.getPhone()));
     }
 
 
     @NonNull
     @Override
     public studentAdapterClass.viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.workplacesingleview,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.studentsingleview,parent,false);
         return new viewholder(view);
     }
 
     class viewholder extends RecyclerView.ViewHolder{
-        TextView name, age, pin, address, description, sub_category, email, institution, contact;
+        TextView name, age, pincode, address, description, type, email, institution, phone;
 
         public viewholder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.name);
             age = itemView.findViewById(R.id.age);
+            phone = itemView.findViewById(R.id.phone);
             email= itemView.findViewById(R.id.email);
-            pin = itemView.findViewById(R.id.pincode);
-            sub_category = itemView.findViewById(R.id.sub_category);
-            description = itemView.findViewById(R.id.description);
-            address = itemView.findViewById(R.id.add);
+            pincode = itemView.findViewById(R.id.pincode);
+            type = itemView.findViewById(R.id.type);
+            description = itemView.findViewById(R.id.prob);
+            address = itemView.findViewById(R.id.address);
             institution = itemView.findViewById(R.id.institution);
         }
     }
